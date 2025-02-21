@@ -20,6 +20,7 @@ public class SpringSecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
+    //Authentication 
     @Bean
     SecurityFilterChain SecurityFilterChain(HttpSecurity http) throws Exception {
 
