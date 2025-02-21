@@ -31,12 +31,12 @@ public class SpringSecurityConfig {
     }
 
     @Bean
-    public UserDetailsService userDetailsService(){
-        
+    public UserDetailsService userDetailsService() {
+
         UserDetails harsha = User.withUsername("harsha")
                 .password(passwordEncoder().encode("password"))
                 .roles("USER")
-                .build();  
+                .build();
 
         UserDetails admin = User.builder()
                 .username("admin")
