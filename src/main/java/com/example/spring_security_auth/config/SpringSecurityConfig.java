@@ -20,14 +20,14 @@ public class SpringSecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
-    //Authentication 
+    // Authentication
     @Bean
     SecurityFilterChain SecurityFilterChain(HttpSecurity http) throws Exception {
 
         http.csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests((authorize) -> {
                     authorize.anyRequest().authenticated();
-                }).httpBasic(Customizer.withDefaults());
+                }).formLogin(Customizer.withDefaults());
         return http.build();
     }
 

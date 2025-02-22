@@ -8,12 +8,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/")
 public class StudentController {
-    
+
     @GetMapping("/greeting")
-    public String greeting(Authentication authentication){
+    public String greeting(Authentication authentication) {
 
         String userName = authentication.getName();
 
         return "Spring security In-memory Authentication Example - Welcome " + userName;
+    }
+
+    @GetMapping("/")
+    public String greet() {
+        return "welcome";
     }
 }
