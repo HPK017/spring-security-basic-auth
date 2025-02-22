@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/")
 public class StudentController {
-
+    
     @GetMapping("/greeting")
-    public String greeting(Authentication authentication) {
+    public String greeting(Authentication authentication){
 
         String userName = authentication.getName();
 
@@ -18,7 +18,7 @@ public class StudentController {
     }
 
     @GetMapping("/")
-    public String greet() {
-        return "welcome";
+    public String greet(){
+        return "welcome to the spring security";
     }
 }
