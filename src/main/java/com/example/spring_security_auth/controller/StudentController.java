@@ -14,6 +14,6 @@ public class StudentController {
 
         String userName = authentication.getName();
 
-        return "Spring security In-memory Authentication Example - Welcome" + userName;
+        return "Spring security In-memory Authentication Example - Welcome " + userName;
     }
 }
